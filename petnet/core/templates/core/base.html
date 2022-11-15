@@ -3,15 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>{% block title %}{% endblock %} | PetNet </title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">
+    <nav class="max-w-4xl mx-auto py-4 px-4 flex items-center justify-between bg-teal-600">
+      <div class="logo">
+          <a href="/" class="text-2xl text-white">PetNet</a>
+      </div>
+
+      <div class="menu">
+        <a href="{% url 'about' %}" class="text-white">About</a>
+
+      </div>
+
+    </nav>
+    <div class="max-w-4xl mx-auto py-4 px-4">
     {% block content %}
     {% endblock %}
+  </div>
   </h1>
 </body>
 </html>
